@@ -10,6 +10,9 @@ grep '^#' /etc/login.defs
 
 `grep '^PASS' /etc/login.defs`
 
+* When ^ is at the beginning of a pattern (e.g., ^A-Z), it indicates the start of a line.
+* When ^ is inside square brackets (e.g., [^A-Z]), it acts as a negation. This means "not any uppercase letter A to Z."
+
 * Extracts the lines which are starting with 'PASS' string
 
 ## `$` - Indicates the line ends with 
