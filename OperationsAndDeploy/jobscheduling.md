@@ -11,4 +11,9 @@
 ***List the Cron jobs*** `crontab -l` - Lists the cronjobs for that user
 ***Edit the cronjob for the specific user*** `sudo crontab -e -u jane` - Edit the cron job for jane user
 ***Remove the cron job the user*** `crontab -r` - remove the cronjob for a user
- 
+
+# Anacron:
+
+* Configuration file for anacron job is `/etc/anacrontab`
+
+ ![anacron](images/anacron.png)
