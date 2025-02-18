@@ -452,10 +452,11 @@ Password: caleston123
 Solution
 To identify the process with high TPS and the partition it is using, follow the steps below:
 
-Run the sudo dstat --top-io --top-bio command to get the process name with I/O activity.
-Run the pgrep python3 command to get the PID of the process.
-Run sudo lsof -p <PID> to list the open files by the process.
-Run sudo lsof -p <PID> | awk '{print $9}' | while read file; do df $file; done to get the device details.
+Run the `sudo dstat --top-io --top-bio` command to get the process name with I/O activity.
+Run the `pgrep python3` command to get the PID of the process.
+Run `sudo lsof -p <PID>` to list the open files by the process.
+Run `sudo lsof -p <PID> | awk '{print $9}' | while read file; do df $file; done` to get the device details.
+
 Find the actual partition used by running the pvs command and store the actual device name in /opt/devname.txt.
 Run the command below to get the PID of the process with high kB_read/s:
 
